@@ -1,0 +1,26 @@
+main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .container {
+    span {
+      font-size: 100px;
+      color: #fff;
+    }
+    .default {
+      color: #fff;
+    }
+    .blue {
+      color: blue;
+    }
+    .none {
+      display: none;
+    }
+    .palindrome {
+      color: red;
+    }
+  }
+
+}
