@@ -15,6 +15,7 @@ export class AppComponent implements OnInit {
   public isPalindrome: boolean
   public isDefault: boolean
   public result: any
+  public waiting: boolean;
 
   createRandomString(stringLength) {
     let randomString = ''
@@ -26,9 +27,11 @@ export class AppComponent implements OnInit {
     return randomString
   }
   ngOnInit() {
+    this.waiting = true
     interval(3000).subscribe(() => {
       this.result = this.createRandomString(5).toLocaleLowerCase()
       if (this.result) {
+        this.waiting = false
         this.isDisable = false
         this.isDefault = true
       }
