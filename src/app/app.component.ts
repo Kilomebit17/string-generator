@@ -32,7 +32,9 @@ export class AppComponent implements OnInit {
       this.result = this.createRandomString(5).toLocaleLowerCase()
       if (this.result) {
         this.waiting = false
+        this.isPalindrome = false
         this.isDisable = false
+        this.isBlue = false
         this.isDefault = true
       }
       if (this.result === this.result.split('').reverse().join('')) { // проверка на палиндром
